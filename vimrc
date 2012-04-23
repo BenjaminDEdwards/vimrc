@@ -11,6 +11,8 @@ set softtabstop=4
 set number
 
 set hlsearch
+set incsearch
+set smartcase
 
 map   <S-tab>  :tabprevious<cr>:echo @%<cr>
 map   <tab>    :tabnext<cr>:echo @%<cr>
@@ -30,10 +32,19 @@ imap  <F4>  :tabprevious<cr>i
 imap  <F3>  :tabnext<cr>i
 imap  <f5>  :tabnew .<cr>
 
+map <f12> :s/pick/squash/ <CR>
+
 map <f6> :q<cr>
 
 "visual stype code folding
 map <f9> zfa}
+
+"highlight trailing whitespace
+map <f10> /\s\+$/
+highlight WHITE_ON_RED ctermfg=white ctermbg=red
+match WHITE_ON_RED /\s\+$/
+"match WHITE_ON_RED /BEN/
+"match WHITE_ON_RED /STDERR/
 
 let &titlestring = $TITLE
 if &term == "screen"
@@ -43,3 +54,24 @@ endif
 if &term == "screen" || &term == "xterm"
         set title
 endif
+
+" Match angle brackets...
+set matchpairs+=<:>
+
+" Give mouse cursor
+set mouse=a
+
+
+" Use an efficient text completion
+set iskeyword+=:
+
+
+" spell checking
+iab eport   export
+iab strig   string
+iab componant component
+iab lcoation location
+iab equilivent equivalent
+iab consiers considers
+iab tp to
+iab equilivent equivalent
