@@ -1,4 +1,6 @@
 syntax on
+filetype plugin on
+
 
 set smartindent
 set tabstop=4
@@ -16,6 +18,7 @@ set smartcase
 
 map   <S-tab>  :tabprevious<cr>:echo @%<cr>
 map   <tab>    :tabnext<cr>:echo @%<cr>
+imap  <S-tab>    <C-n>
 
 map   <f2>     :echo @%<cr>
 map   <S-f2>   :echo expand('%:p')<cr>
@@ -32,6 +35,7 @@ imap  <F4>  :tabprevious<cr>i
 imap  <F3>  :tabnext<cr>i
 imap  <f5>  :tabnew .<cr>
 
+map <f11> :so $MYVIMRC<cr>
 map <f12> :s/pick/squash/ <CR>
 
 map <f6> :q<cr>
@@ -43,8 +47,6 @@ map <f9> zfa}
 map <f10> /\s\+$/
 highlight WHITE_ON_RED ctermfg=white ctermbg=red
 match WHITE_ON_RED /\s\+$/
-"match WHITE_ON_RED /BEN/
-"match WHITE_ON_RED /STDERR/
 
 let &titlestring = $TITLE
 if &term == "screen"
@@ -65,13 +67,6 @@ set mouse=a
 " Use an efficient text completion
 set iskeyword+=:
 
-
 " spell checking
-iab eport   export
-iab strig   string
-iab componant component
-iab lcoation location
-iab equilivent equivalent
-iab consiers considers
-iab tp to
-iab equilivent equivalent
+" Loads a file with common errors and correcitons
+source ~/.vim/spelling.vim
