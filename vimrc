@@ -29,7 +29,7 @@ map   <C-down> <C-e>
 " Map f-keys
 " f1
 " f2  Display name of current file
-" f3  Next Tab
+" f3  Toggle TagsList code browser - show subroutines.
 " f4  Previous Tab
 " f5  New Tab
 " f6  Quit
@@ -41,11 +41,10 @@ map   <C-down> <C-e>
 " f12 GIT - substiture 'pick' for 'squash'
 
 map   <f2>  :echo @%<cr>
-map   <F3>  :tabnext<cr>:echo @%<cr>
+map   <F3>  :TlistToggle
 map   <F4>  :tabprevious<cr>:echo @%<cr>
 imap  <F4>  :tabprevious<cr>i
 map   <f5>  :tabnew .<cr>
-imap  <F3>  :tabnext<cr>i
 imap  <f5>  :tabnew .<cr>
 map   <f6>  :q<cr>
 map   <f9>  zfa}
