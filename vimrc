@@ -41,7 +41,7 @@ map   <C-down> <C-e>
 " f12 GIT - substiture 'pick' for 'squash'
 
 map   <f2>  :echo @%<cr>
-map   <F3>  :TlistToggle
+map   <F3>  :TlistToggle<cr>
 map   <F4>  :tabprevious<cr>:echo @%<cr>
 imap  <F4>  :tabprevious<cr>i
 map   <f5>  :tabnew .<cr>
