@@ -30,7 +30,7 @@ map   <C-down> <C-e>
 " f1
 " f2  Display name of current file
 " f3  Toggle TagsList code browser - show subroutines.
-" f4  Previous Tab
+" f4  Split Screen and open file manager
 " f5  New Tab
 " f6  Quit
 " f7
@@ -42,8 +42,7 @@ map   <C-down> <C-e>
 
 map   <f2>  :echo @%<cr>
 map   <F3>  :TlistToggle<cr>
-map   <F4>  :tabprevious<cr>:echo @%<cr>
-imap  <F4>  :tabprevious<cr>i
+map   <f4>  :vsplit<cr><C-w>w:Ex<cr>
 map   <f5>  :tabnew .<cr>
 imap  <f5>  :tabnew .<cr>
 map   <f6>  :q<cr>
