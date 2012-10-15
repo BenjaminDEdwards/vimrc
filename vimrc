@@ -46,6 +46,8 @@ map   <f4>  :vsplit<cr><C-w>w:Ex<cr>
 map   <f5>  :tabnew .<cr>
 imap  <f5>  :tabnew .<cr>
 map   <f6>  :q<cr>
+map   <f7>  :bprev
+map   <f8>  :bnext
 map   <f9>  zfa}
 map   <f10> /\s\+$/
 map   <f11> :so $MYVIMRC<cr>
