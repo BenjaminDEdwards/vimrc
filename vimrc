@@ -51,7 +51,7 @@ map   <f8>  :bnext
 map   <f9>  zfa}
 map   <f10> /\s\+$/
 map   <f11> :so $MYVIMRC<cr>
-map   <f12> :s/pick/squash/ <CR>
+map   <f12> :s/pick/fixup/ <CR>
 
 
 
