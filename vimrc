@@ -23,9 +23,10 @@ imap  <S-tab>    <C-n>
 map   <S-f2>   :echo expand('%:p')<cr>
 
 " move with ctrl up or down
-map   <C-up> <C-y>
-map   <C-down> <C-e>
-
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
 " Map f-keys
 " f1
 " f2  Display name of current file
@@ -43,17 +44,14 @@ map   <C-down> <C-e>
 map   <f2>  :echo @%<cr>
 map   <F3>  :TlistToggle<cr>
 map   <f4>  :vsplit<cr><C-w>w:Ex<cr>
-map   <f5>  :tabnew .<cr>
-imap  <f5>  :tabnew .<cr>
+map   <f5>  :split<cr><C-w>w:Ex<cr>
 map   <f6>  :q<cr>
-map   <f7>  :bprev
-map   <f8>  :bnext
+map   <f7>  :bprev<cr>
+map   <f8>  :bnext<cr>
 map   <f9>  zfa}
 map   <f10> /\s\+$/
 map   <f11> :so $MYVIMRC<cr>
 map   <f12> :s/pick/fixup/ <CR>
-
-
 
 "highlight trailing whitespace
 highlight WHITE_ON_RED ctermfg=white ctermbg=red
@@ -73,7 +71,6 @@ set matchpairs+=<:>
 
 " Give mouse cursor
 set mouse=a
-
 
 " Use an efficient text completion
 set iskeyword+=:
