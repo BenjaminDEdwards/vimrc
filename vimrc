@@ -53,6 +53,13 @@ map   <f10> /\s\+$/
 map   <f11> :so $MYVIMRC<cr>
 map   <f12> :s/pick/fixup/ <cr>
 
+" Leader commands
+map <Leader>b :buffers<cr>:b<Space>
+map <Leader>v :vsplit<cr>
+map <Leader>s :split<cr>
+map <Leader>q :quit<cr>
+
+
 "highlight trailing whitespace
 highlight WHITE_ON_RED ctermfg=white ctermbg=red
 match WHITE_ON_RED /\s\+$/
