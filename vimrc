@@ -58,6 +58,7 @@ map <Leader>b :buffers<cr>:b<Space>
 map <Leader>v :vsplit<cr>
 map <Leader>s :split<cr>
 map <Leader>q :quit<cr>
+map <Leader>o :e.<cr>
 
 
 "highlight trailing whitespace
