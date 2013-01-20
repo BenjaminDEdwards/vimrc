@@ -51,7 +51,7 @@ map   <f8>  :bnext<cr>
 map   <f9>  zfa}
 map   <f10> /\s\+$/
 map   <f11> :so $MYVIMRC<cr>
-map   <f12> :s/pick/fixup/ <CR>
+map   <f12> :s/pick/fixup/ <cr>
 
 "highlight trailing whitespace
 highlight WHITE_ON_RED ctermfg=white ctermbg=red
