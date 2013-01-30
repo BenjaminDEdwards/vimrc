@@ -60,6 +60,8 @@ map <Leader>s :split<cr>
 map <Leader>q :quit<cr>
 map <Leader>o :e.<cr>
 
+" map ; to ; so that ;q does the right thing
+map ; :
 
 "highlight trailing whitespace
 highlight WHITE_ON_RED ctermfg=white ctermbg=red
