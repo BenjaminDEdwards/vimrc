@@ -35,12 +35,12 @@ sub set_up {
     my ($self) = @_;
 
     $self->SUPER::set_up;
-    require '';
 
     $self->{local_data} = [
         Venda::Mock::Class::tempModule(qw{
         }),
     ];
+    require '';
 }
 
 =item tear_down ( )
