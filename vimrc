@@ -89,3 +89,6 @@ set iskeyword+=:
 " spell checking
 " Loads a file with common errors and correcitons
 source ~/.vim/spelling.vim
+
+"Directory Check
+source ~/.vim/libraries/directoryCheck.vim
