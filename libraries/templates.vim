@@ -7,11 +7,17 @@ function! DeclarePackage ()
 
 endfunction
 
-function! UnitTest()
-    "call append( line(1) , "package " . DeclarePackage() . ";" )
-    read ~/.vim/templates/unitTest.txt
+function! TemplateUnitTestClass()
+    read ~/.vim/templates/unitTestClass.txt
     1delete
     let classpath = DeclarePackage()
     execute '%s/' . 'CLASSPATH' . '/' . classpath . '/g'
     /TODO
+endfunction
+
+function! TemplateTest(name)
+    read ~/.vim/templates/test.txt
+    execute '%s/' . 'NAME' . '/' . a:name . '/g'
+    /CODE
+    return "Done"
 endfunction
