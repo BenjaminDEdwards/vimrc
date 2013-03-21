@@ -92,3 +92,6 @@ source ~/.vim/spelling.vim
 
 "Directory Check
 source ~/.vim/libraries/directoryCheck.vim
+
+"Enter code via templates
+source ~/.vim/libraries/templates.vim

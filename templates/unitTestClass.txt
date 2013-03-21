@@ -1,0 +1,81 @@
+package CLASSPATH
+
+use strict;
+use warnings;
+use base qw/Venda::UnitTest/;
+
+use Venda::Mock;
+use Venda::Mock::Class;
+
+=head1 NAME
+
+CLASSPATH
+
+=head1 DESCRIPTION
+
+TODO
+
+=head1 SYNOPSIS
+
+./TestRunner.pl --unit CLASSPATH
+
+=head1 FIXTURES
+
+=over
+
+=cut
+
+=item set_up
+
+TODO
+
+=cut
+
+sub set_up {
+    my ($self) = @_;
+
+    $self->SUPER::set_up;
+    require '';
+
+    $self->{local_data} = [
+        Venda::Mock::Class::tempModule(qw{
+        }),
+    ];
+}
+
+=item tear_down ( )
+
+Unloads all objects mocked for this test
+
+=cut
+
+sub tear_down {
+    my ($self) = @_;
+    delete $self->{local_data};
+    $self->SUPER::tear_down;
+}
+
+=back
+
+=head1 TESTS
+
+=over
+
+=cut
+
+
+=back
+
+=cut
+
+1;
+
+=head1 SEE ALSO
+
+L<sct::wz_orpayment>
+
+=head1 COPYRIGHT
+
+(C) Venda - all rights reserved.
+
+=cut
