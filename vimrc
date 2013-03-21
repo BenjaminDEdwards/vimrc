@@ -28,7 +28,7 @@ nmap <silent> <C-Down> :wincmd j<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 " Map f-keys
-" f1
+" f1 Reload the vimrc files
 " f2  Display name of current file
 " f3  Toggle TagsList code browser - show subroutines.
 " f4  Split Screen and open file manager
@@ -38,9 +38,10 @@ nmap <silent> <C-Right> :wincmd l<CR>
 " f8
 " f9  Visual Style code folding
 " f10 Highlight whitespace at end of lines
-" f11 Reload the vimrc files
-" f12 GIT - substiture 'pick' for 'squash'
+" f11 GIT - substiture 'pick' for 'squash'
+" f12 GIT - substiture 'pick' for 'fixup'
 
+map   <f1>  :so $MYVIMRC<cr>
 map   <f2>  :echo @%<cr>
 map   <F3>  :TlistToggle<cr>
 map   <f4>  :vsplit<cr><C-w>w:Ex<cr>
@@ -50,7 +51,7 @@ map   <f7>  :bprev<cr>
 map   <f8>  :bnext<cr>
 map   <f9>  zfa}
 map   <f10> /\s\+$/
-map   <f11> :so $MYVIMRC<cr>
+map   <f11> :s/pick/squash/ <cr>
 map   <f12> :s/pick/fixup/ <cr>
 
 " Leader commands
