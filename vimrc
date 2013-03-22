@@ -41,11 +41,11 @@ nmap <silent> <C-Right> :wincmd l<CR>
 " f11 GIT - substiture 'pick' for 'squash'
 " f12 GIT - substiture 'pick' for 'fixup'
 
-map   <f1>  :so $MYVIMRC<cr>
-map   <f2>  :echo @%<cr>
-map   <F3>  :TlistToggle<cr>
-map   <f4>  :vsplit<cr><C-w>w:Ex<cr>
-map   <f5>  :split<cr><C-w>w:Ex<cr>
+map   <f1>  :GitDiff<cr>
+map   <f2>  :TlistToggle<cr>
+map   <f3>  :GitBlame()<cr>
+map   <f4>  :GitLog<cr>
+map   <f5>  :so $MYVIMRC<cr>
 map   <f6>  :q<cr>
 map   <f7>  :bprev<cr>
 map   <f8>  :bnext<cr>
