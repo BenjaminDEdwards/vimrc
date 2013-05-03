@@ -5,15 +5,15 @@ let g:colors_name = "grb256"
 
 hi pythonSpaceError ctermbg=red guibg=red
 
-hi Comment ctermfg=darkgray
+hi Comment ctermfg=darkgray guifg=#A0A0A0 cterm=italic gui=ITALIC
 
-hi StatusLine ctermbg=darkgrey ctermfg=white
-hi StatusLineNC ctermbg=black ctermfg=lightgrey
-hi VertSplit ctermbg=black ctermfg=lightgrey
-hi LineNr ctermfg=darkgray
+hi StatusLine ctermbg=darkgrey ctermfg=white guifg=#EBEB99
+hi StatusLineNC ctermbg=black ctermfg=lightgrey guifg=#FFFFFF
+hi VertSplit ctermbg=black ctermfg=lightgrey guifg=#ADADAD gui=BOLD
+hi LineNr ctermfg=darkgray guifg=#C2D6FF
 hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=yellow       ctermbg=NONE        cterm=NONE
-hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=236    cterm=NONE
+hi Visual           guifg=#000000     guibg=#E6E6E6     gui=NONE      ctermfg=NONE        ctermbg=236    cterm=NONE
 
 hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=16       ctermbg=red         cterm=NONE     guisp=#FF6C60 " undercurl color
 hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=16       ctermbg=red         cterm=NONE
