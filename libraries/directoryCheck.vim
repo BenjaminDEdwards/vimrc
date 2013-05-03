@@ -5,7 +5,9 @@
 " that does not exist
 function! EnsureDirExists ()
     let required_dir = expand("%:h")
-    call mkdir( required_dir, 'p' )
+    if !isdirectory(required_dir)
+        call mkdir( required_dir, 'p' )
+    endif
 endfunction
 
 " Override NewFile so as well as creating a new file, it creates
