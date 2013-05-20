@@ -99,3 +99,8 @@ source ~/.vim/libraries/templates.vim
 
 "Run shell commands and put the results in a scratch buffer
 source ~/.vim/libraries/runshellcommand.vim
+
+"Gvim uses different configurations.
+if has("gui_running")
+    source ~/.vim/gvimrc
+endif
