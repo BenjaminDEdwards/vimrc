@@ -1,4 +1,4 @@
-package CLASSPATH
+package CLASSPATH;
 
 use strict;
 use warnings;
@@ -52,7 +52,42 @@ Unloads all objects mocked for this test
 sub tear_down {
     my ($self) = @_;
     delete $self->{local_data};
+    delete $self->{fixture_data};
     $self->SUPER::tear_down;
+}
+
+=item mock_venda
+
+Mocks Venda->current.
+
+the Mocked Venda-current supports the following:
+
+=over
+
+=item Venda->current->sct_entprs
+
+=item Venda->current->sct_business
+
+=item Venda->current->venda_order_manager
+
+=item Venda->current->venda_payment_manager
+
+=back
+
+=cut
+
+sub mock_venda {
+    my ($self) = @_;
+
+    return Venda::Mock->new({
+        'class' => 'Venda',
+        'method' => {
+            sct_entprs   => sub { $self->{fixture_data}->{entprs_ini} },
+            sct_business => sub { $self->{fixture_data}->{sct_business} },
+            venda_order_manager   => sub { $self->mock_orderManager },
+            venda_payment_manager => sub { $self->mock_paymentManager },
+        }
+    });
 }
 
 =back
