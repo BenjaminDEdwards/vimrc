@@ -5,6 +5,9 @@
 
 iab agaisnt    against
 
+iab assignes   assigns
+iab Assignes   assigns
+
 iab altar      alter
 iab Altar      Alter
 
@@ -41,3 +44,7 @@ iab ture       true
 
 iab implimented implemented
 iab Implimented Implemented
+
+iab whos whose
+
+iab strucutre structure
