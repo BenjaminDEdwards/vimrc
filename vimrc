@@ -41,13 +41,13 @@ nmap <silent> <C-Right> :wincmd l<CR>
 " f11 GIT - substiture 'pick' for 'squash'
 " f12 GIT - substiture 'pick' for 'fixup'
 
-map   <f1>  :GitDiff<cr>
+map   <f1>  :NERDTree<cr>
 map   <f2>  :TlistToggle<cr>
 map   <f3>  :GitBlame()<cr>
 map   <f4>  :GitLog<cr>
 map   <f5>  :Shell source ~/.bashrc; bundle exec rake cucumber<cr><cr>:set nonumber<cr>:res5<cr><S-g>
 map   <f6>  :q<cr>
-map   <f7>  :bprev<cr>
+map   <f7>  :GitDiff<cr>
 map   <f8>  :bnext<cr>
 map   <f9>  zfa}
 map   <f10> /\s\+$/
