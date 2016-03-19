@@ -61,6 +61,7 @@ map <Leader>s :split<cr>
 map <Leader>q :quit<cr>
 map <Leader>o :e.<cr>
 map <leader>t :ConqueTerm bash<cr>
+map <leader>j :%!python -m json.tool<cr>
 map <leader>p "*p$i
 
 " map ; to ; so that ;q does the right thing
