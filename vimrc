@@ -43,7 +43,7 @@ nmap <silent> <C-Right> :wincmd l<CR>
 
 map   <f1>  :NERDTree<cr>
 map   <f2>  :TlistToggle<cr>
-map   <f3>  :GitBlame()<cr>
+map   <f3>  :. ! bash -x<cr>
 map   <f4>  :GitLog<cr>
 map   <f5>  :Shell source ~/.bashrc; bundle exec rake cucumber<cr><cr>:set nonumber<cr>:res5<cr><S-g>
 map   <f6>  :q<cr>
